@@ -1,0 +1,15 @@
+function [ detA ] = det3x3( A )
+%This function finds the determinant of a 3x3 matrix.
+%
+%   Input variable must be a 3x3 matrix.
+%
+%   Coded by: Joel N. Johnson
+%---------------------------------------------------------------
+
+A1 = A(1,1) * ((A(2,2) * A(3,3)) - (A(3,2) * A(2,3)));
+A2 = A(1,2) * ((A(2,1) * A(3,3)) - (A(3,1) * A(2,3)));
+A3 = A(1,3) * ((A(2,1) * A(3,2)) - (A(3,1) * A(2,2)));
+
+detA = A1 - A2 + A3;
+
+end
